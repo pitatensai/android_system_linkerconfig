@@ -52,7 +52,6 @@ Section BuildSystemSection(Context& ctx) {
                           "com.android.cronet",
                           "com.android.media",
                           "com.android.conscrypt",
-                          "com.android.os.statsd",
                       });
 }
 }  // namespace contents
