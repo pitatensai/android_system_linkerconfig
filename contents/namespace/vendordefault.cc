@@ -75,12 +75,6 @@ Namespace BuildVendorDefaultNamespace([[maybe_unused]] const Context& ctx) {
   }
 
   ns.AddSearchPath("/vendor/${LIB}", AsanPath::WITH_DATA_ASAN);
-
-  // Add for libskia.so to reduce hwcomposer size.
-  ns.AddSearchPath("/system/${LIB}", AsanPath::WITH_DATA_ASAN);
-  ns.AddSearchPath("/apex/com.android.art/${LIB}", AsanPath::WITH_DATA_ASAN);
-  // End add.
-
   // Allow loosen restriction between vndk and private platform libraries
   if (is_vndklite) {
     ns.AddSearchPath("/vendor/${LIB}/vndk", AsanPath::WITH_DATA_ASAN);
